@@ -1,5 +1,15 @@
 # Docker
 
+1. 개념
+
+2. 레이어계층
+
+3. 도커를 쓰는 이유
+
+4. Docker Compose
+
+   
+
 ## 도커란?
 
 컨테이너 기반의 가상화 도구이다.
@@ -14,7 +24,7 @@
 
 
 
-## 레이어 저장 방식
+## 레이어 계층
 
 ![image-layer](https://user-images.githubusercontent.com/26567962/74536317-3101e180-4f7b-11ea-8217-1f30185fe047.png)
 
