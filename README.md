@@ -81,13 +81,13 @@
 
 1. 개념
 
-2. 도커를 쓰는 이유
+2. 레이어계층
 
-3. 동작 방식
+3. 도커를 쓰는 이유
 
 4. Docker Compose
 
-   
+    
 
 ## Network
 
@@ -111,8 +111,8 @@
 
 ## Python
 
-1. 제너리이터
-2. 메모리 관리
-3. list tuple 차이
-4. tim sort
-5. lamda
+1. 매직메소드
+2. timsort
+3. generator
+4. iterator
+5. lambda
