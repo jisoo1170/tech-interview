@@ -80,34 +80,11 @@
 ## Docker
 
 1. 개념
-
 2. 레이어계층
-
 3. 도커를 쓰는 이유
-
 4. Docker Compose
 
-    
 
-## Network
-
-1. HTTP
-
-2. HTTPS
-
-3. 웹 서비스 구성 요소
-
-4. uwsgi
-
-5. nginx
-
-6. 도메인 가져오는 법
-
-7. 대칭키 비대칭키
-
-8. TLS
-
-   
 
 ## Python
 
@@ -116,3 +93,17 @@
 3. generator
 4. iterator
 5. lambda
+
+
+
+## Web
+
+1. HTTP
+2. HTTPS
+3. Web server
+4. WAS (wep application server)
+5. MiddleWare
+6. 도메인 가져오는 법
+7. 대칭키 비대칭키
+8. SSL
+9. TLS
