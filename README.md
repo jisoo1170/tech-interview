@@ -100,10 +100,11 @@
 
 1. HTTP
 2. HTTPS
-3. Web server
-4. WAS (wep application server)
-5. MiddleWare
-6. 도메인 가져오는 법
-7. 대칭키 비대칭키
-8. SSL
-9. TLS
+3. SSL
+4. Web server
+5. CGI (Common Gateway Interface)
+6. WSGI (Web Server Gateway Interface)
+7. WAS (wep application server)
+8. 도메인 가져오는 법
+9. 대칭키 비대칭키
+10. TLS
