@@ -4,11 +4,12 @@
 2. HTTPS
 3. SSL
 4. Web server
-5. WAS (wep application server)
-6. MiddleWare
-7. 도메인 가져오는 법
-8. 대칭키 비대칭키
-9. TLS
+5. CGI (Common Gateway Interface)
+6. WSGI (Web Server Gateway Interface)
+7. WAS (wep application server)
+8. 도메인 가져오는 법
+9. 대칭키 비대칭키
+10. TLS
 
 
 
@@ -38,25 +39,59 @@ HTTP의 보안 취약점을 해결하기 위한 프로토콜이다. SSL (Secure 
 
 ## Web Server
 
-개념은 하드웨어와 소프트웨어로 구분된다. 하드웨어는 Web 서버가 설치되어 있는 컴퓨터이고, 소프트웨어는 웹 브라우저 클라이언트로부터 HTTP 요청을 받아 **정적인 컨텐츠**(html, jpeg, css 등)를 제공하는 컴퓨터 프로그램을 말한다. 
+##### 클라이언트로부터 HTTP 요청을 받아 정적인 컨텐츠(html, jpeg, css 등)를 제공하는 컴퓨터 프로그램을 말한다. 
 
 클라이언트에서 요청이 올 때, 가장 앞에서 요청에 대한 처리를 한다.
 
 HTTP 프로토콜을 기반으로 클라이언트의 요청을 서비스하는 기능. 요청에 따라 정적인 컨텐츠를 제공하거나 동적인 컨텐츠를 요청한다.
 
-정적인 컨텐츠를 제공하고 WAS를 거치지 않고 바로 자원을 제공한다.
+정적인 컨텐츠를 제공할 때는 WAS를 거치지 않고 바로 자원을 제공한다.
 
 동적인 컨텐츠 제공을 위한 요청을 전달한다. 클라이언트의 요청(request)를 WAS에 보내고, WAS가 처리한 결과를 클라이언트에게 전달한다 (Response). 클라이언트는 일반적으로 웹 브라우저를 의미한다.
 
-EX) Apache Server, Nginx 등
+EX) Apache Server, **Nginx** 등
 
 [출처](https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html)
 
 
 
+## CGI (Common Gateway Interface)
+
+웹 서버에서 어플리케이션을 제공하기(동작시키기) 위한 인터페이스다. 정적인 웹서버를 동적으로 기능하게 하기 위해서 등장했다. 서버 프로그램과 외부 프로그램 간의 인터페이스다.
+
+##### 서버에서 다른 프로그램을 불러내고 그 프로그램의 처리 결과를 클라이언트로 보내줄 수 있는 인터페이스.
+
+CGI는 데이터 처리 요청이 있을 때마다 매번 프로세스를 생성하여 처리했다. 요청이 많아질수록 서버에 부하가 크게 가게 된다.
+
+![image](https://user-images.githubusercontent.com/26567962/74832886-aabf1400-535b-11ea-94fe-087a191c8470.png)
+
+
+
+## WSGI (Web Server Gateway Interface)
+
+##### 파이썬에서 어플리케이션(파이썬 습크리트)이 웹 서버와 통신하기 위한 인터페이스다. CGI의 일종
+
+서버와 어플리케이션 사이에서, 양방향의 API를 실행할 수 있는 WSGI 미들웨어 (이하 미들웨어, middleware)가 사용되기도 한다. 서버는 클라이언트의 요청을 받아 미들웨어에 넘겨준다. 미들웨어가 요청을 처리한 후에는 요청을 어플리케이션에 보낸다. 어플리케이션에서 나온 응답은 다시 미들웨어를 통해 서버와 궁극적으로 클라이언트 측에 전달된다. WSGI 친화적인 어플리케이션에서는 이러한 미들웨어 여러 개가 스택을 이루어 사용될 수 있다.
+
+웹 서버(nginx)와 웹 애플리케이션(Django)간의 연결을 중계한다. niginx에서 받은 요청을 django에서 처리하기 위해 중계 역할을 하는 것. nginx는 파이썬을 모르기 때문에 wsgi가 받아 http 요청을 파이썬으로 바꿔주고, django로 부터 받은 응답을 nginx가 알 수 있도록 바꿔준다.
+
+web server가 django에게 말을 걸 수 있는 수단
+
+[출처](https://itmining.tistory.com/135)
+
+[출처2](https://show-me-the-money.tistory.com/50)
+
+EX) uwsgi, gunicorn
+
+> MiddleWare
+>
+> 양 쪽을 연결하여 데이터를 주고 받을 수 있도록 중간에서 매개 역할을 하는 소프트웨어
+
+
+
 ## WAS (Web Application Server)
 
-WAS = Web Server + Web Container
+WAS = Web Server + CGI / 웹 서버 위에 서버 어플리케이션을 얹은 것
 
 DB 조회나 다양한 로직 처리를 요구하는 **동적인 컨텐츠**를 제공하기 위해 만들어진 application server.
 
@@ -72,13 +107,19 @@ HTTP를 통해 컴퓨터나 장치에 애플리케이션을 수행해주는 미�
 
 EX) Tomcat, JBoss 등
 
-> Servlet
+> Servlet -> java로 구현된 CGI
 >
 > 자바를 사용하여 웹을 만들기 위해 필요한 기술.
 >
 > 웹 프로그래밍에서 클라이언트의 요청을 처리하고 그 결과를 다시 클라이언트에게 전송하는 Servlet 클래스의 구현 규칙을 지킨 자바 프로그래밍 기술
 >
 > MVC 패턴에서 Controller로 이용된다.
+
+
+
+#### 파이썬 기준
+
+![image](https://user-images.githubusercontent.com/26567962/74838989-d942ec00-5367-11ea-9005-9bdeddda55d3.png)
 
 
 
@@ -104,30 +145,6 @@ EX) Tomcat, JBoss 등
 
 Load Balancing을 위해 여러 대의 WAS를 연결하여 사용할 수 있다. 장애 극복과 처리에 유리하다.
 
-
-
-## MiddleWare
-
-Client - MiddleWare Server - DB Server(DBMS)
-
-비즈니스 로직을 Client와 DBMS 사이의 MiddleWare Server에서 동작하도록 함으로써 Client는 입력과 출력만 담당하게 된다.
-
-동작과정
-
-- client는 단순히 요청만 중앙에 있는 MiddleWare Server에게 보낸다.
-- MiddleWare Server에서 대부분의 로직이 수행된다.
-- 이때, 데이터를 조작할 일이 있으면 DBMS에 부탁한다.
-- 로직의 결과를 Client에게 전송한다.
-- Client는 그 결과를 화면에 보여준다.
-
-
-
-> 보충
-
-
-
-
-
 ## 
 
 ### Q. HTTP와 HTTPS 차이점을 말해주세요
@@ -146,7 +163,7 @@ HTTPS는 HTTP의 보안 취약점을 해결하기 위해 나온 프로토콜입�
 
 ### Q. WAS란 무엇인가요
 
-동적인 컨텐츠를 제공하기 위해 만들어진 application server입니다. 사용자의 요청에 맞는 데이터를 DB에서 가져와서 비즈니스 로직에 맞게 그때 그때 결과를 만들어 제공하므로써 자원을 효율적으로 사용할 수 있습니다.
+웹 서버 위에 웹 어플리케이션이 얹어진 것입니다. 정적인 요청 뿐만 아니라 동적인 요청도 처리가 가능합니다. 사용자의 요청에 맞는 데이터를 DB에서 가져와서 비즈니스 로직에 맞게 그때 그때 결과를 만들어 제공하므로써 자원을 효율적으로 사용할 수 있습니다.
 
 
 
@@ -158,3 +175,14 @@ WAS만 있다면 정적 파일들에 대한 제공도 모두 서버에서 요청
 
 따라서 자원 이용의 효율성을 위하여 구분하여 사용합니다.
 
+
+
+### Q. CGI (Common Gateway Interface)는 무엇인가요
+
+웹 서버에서 어플리케이션을 동작시켜 동적 기능을 가능하게 하는 인터페이스입니다. CGI는 데이터 처리 요청이 있을 때 마다 매번 프로세스를 생성하여 처리했기 때문에 요청이 많아지면 서버에 무리가 가게 됩니다.
+
+
+
+### Q. WSGI는 무엇인가요
+
+파이썬에서 어플리케이션이 웹 서버와 통신하기 위한 인터페이스입니다. 서버는 파이썬을 모르기 때문에 wsgi가 받아 http 요청을 파이썬으로 바꿔주고, 어플리케이션으로 부터 받은 응답을 서버가 알 수 있도록 변경해 주는 역할입니다.
