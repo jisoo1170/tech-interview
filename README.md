@@ -10,13 +10,13 @@
 
 ## Algotrihm
 
-1. 버블 정렬
+1. 버블 정렬 ✔️
 
-2. 삽입 정렬
+2. 삽입 정렬 ✔️
 
-3. 선택 정렬
+3. 선택 정렬 ✔️
 
-4. 합병 정렬 (merge sort)
+4. 합병 정렬 (merge sort) ✔️
 
 5. 퀵 정렬
 
@@ -30,9 +30,10 @@
 
 ## API
 
-1. 개념
-2. REST API
-3. 사용자 reqeust 동작 방식
+3. 개념 ✔️
+2. REST ✔️
+3. REST API ✔️
+4. RESTful ✔️
 
 
 
@@ -63,7 +64,7 @@
 
 9. 리스트
 
-   
+    
 
 ## Django
 
@@ -79,32 +80,33 @@
 
 ## Docker
 
-1. 개념
-2. 레이어계층
-3. 도커를 쓰는 이유
-4. Docker Compose
+1. 개념 ✔️
+2. 레이어계층 ✔️
+3. 도커를 쓰는 이유 ✔️
+4. Docker Compose ✔️
 
 
 
 ## Python
 
-1. 매직메소드
-2. timsort
-3. generator
-4. iterator
-5. lambda
+1. 매직메소드 ✔️
+2. timsort ✔️
+3. generator ✔️
+4. iterator ✔️
+5. lambda ✔️
 
 
 
 ## Web
 
-1. HTTP
-2. HTTPS
-3. SSL
-4. Web server
-5. CGI (Common Gateway Interface)
-6. WSGI (Web Server Gateway Interface)
-7. WAS (wep application server)
-8. 도메인 가져오는 법
-9. 대칭키 비대칭키
-10. TLS
+1. HTTP ✔️
+2. HTTPS ✔️
+3. HTTP 프로토콜 ✔️
+4. Web server ✔️
+5. CGI (Common Gateway Interface) ✔️
+6. WSGI (Web Server Gateway Interface) ✔️
+7. WAS (wep application server) ✔️
+8. 도메인 동작 원리 ✔️
+9. 대칭키 비대칭키 ✔️
+10. SSL ✔️
+11. TLS ✔️
