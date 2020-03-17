@@ -80,7 +80,7 @@ web server가 django에게 말을 걸 수 있는 수단
 
 [출처2](https://show-me-the-money.tistory.com/50)
 
-EX) uwsgi, gunicorn
+EX) **uwsgi**, gunicorn
 
 > MiddleWare
 >
