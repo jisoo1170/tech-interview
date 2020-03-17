@@ -10,7 +10,7 @@
 
 5. lambda ✔️
 
-6. Counter
+6. Counter  ✔️
 
     
 
