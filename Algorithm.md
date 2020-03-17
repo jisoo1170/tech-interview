@@ -1,13 +1,13 @@
 # Algorithm
 
-1. 버블 정렬 ✔️
-2. 삽입 정렬 ✔️
-3. 선택 정렬 ✔️
-4. 합병 정렬 (merge sort) ✔️
-5. 퀵 정렬 ✔️
-6. 이진탐색 ✔️
-7. BFS ✔️
-8. DFS ✔️
+1. 버블 정렬  ✔️
+2. 삽입 정렬  ✔️
+3. 선택 정렬  ✔️
+4. 합병 정렬 (merge sort)  ✔️
+5. 퀵 정렬  ✔️
+6. 이진탐색  ✔️
+7. BFS  ✔️
+8. DFS  ✔️
 
 [출처](https://gmlwjd9405.github.io/tags#algorithm)
 
