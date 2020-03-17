@@ -1,4 +1,4 @@
-# Web
+# Web
 
 1. HTTP ✔️
 2. HTTPS ✔️
