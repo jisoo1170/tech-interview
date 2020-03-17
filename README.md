@@ -10,30 +10,30 @@
 
 ## Algotrihm
 
-1. 버블 정렬 ✔️
+1. 버블 정렬  ✔️
 
-2. 삽입 정렬 ✔️
+2. 삽입 정렬  ✔️
 
-3. 선택 정렬 ✔️
+3. 선택 정렬  ✔️
 
-4. 합병 정렬 (merge sort) ✔️
+4. 합병 정렬 (merge sort)  ✔️
 
-5. 퀵 정렬
+5. 퀵 정렬  ✔️
 
-6. 이진탐색
+6. 이진탐색  ✔️
 
-7. BFS
+7. BFS  ✔️
 
-8. DFS
+8. DFS  ✔️
 
    
 
 ## API
 
-3. 개념 ✔️
-2. REST ✔️
-3. REST API ✔️
-4. RESTful ✔️
+3. 개념  ✔️
+2. REST  ✔️
+3. REST API  ✔️
+4. RESTful  ✔️
 
 
 
@@ -46,67 +46,72 @@
 
 ## DataStructure
 
-1. 스택
+1. 스택  ✔️
 
-2. 큐
+2. 큐  ✔️
 
-3. 힙
+3. 힙  ✔️
 
-4. 트리
+4. 트리  ✔️
 
-5. 이진트리
+5. 이진트리  ✔️
 
-6. 그래프
+6. 이진탐색트리  ✔️
 
-7. 딕셔너리(해쉬)
+7. 그래프  ✔️
 
-8. 배열
+8. 해시 (딕셔너리)  ✔️
 
-9. 리스트
+9. 배열  ✔️
 
-    
+10. 리스트  ✔️
+
+11. 연결 리스트  ✔️
+
+     
 
 ## Django
 
-1. 구조
+1. 구조  ✔️
 
-2. 동작 방식
+2. 동작 방식  ✔️
 
-3. DRF 구조
+3. DRF 구조  ✔️
 
-4. DRF 동작 방식
+4. DRF 동작 방식  ✔️
 
    
 
 ## Docker
 
-1. 개념 ✔️
-2. 레이어계층 ✔️
-3. 도커를 쓰는 이유 ✔️
-4. Docker Compose ✔️
+1. 개념  ✔️
+2. 레이어계층  ✔️
+3. 도커를 쓰는 이유  ✔️
+4. Docker Compose  ✔️
 
 
 
 ## Python
 
-1. 매직메소드 ✔️
-2. timsort ✔️
-3. generator ✔️
-4. iterator ✔️
-5. lambda ✔️
+1. 매직메소드  ✔️
+2. timsort  ✔️
+3. generator  ✔️
+4. iterator  ✔️
+5. lambda  ✔️
+6. Counter  ✔️
 
 
 
 ## Web
 
-1. HTTP ✔️
-2. HTTPS ✔️
-3. HTTP 프로토콜 ✔️
-4. Web server ✔️
-5. CGI (Common Gateway Interface) ✔️
-6. WSGI (Web Server Gateway Interface) ✔️
-7. WAS (wep application server) ✔️
-8. 도메인 동작 원리 ✔️
-9. 대칭키 비대칭키 ✔️
-10. SSL ✔️
-11. TLS ✔️
+1. HTTP  ✔️
+2. HTTPS  ✔️
+3. HTTP 프로토콜  ✔️
+4. Web server  ✔️
+5. CGI (Common Gateway Interface)  ✔️
+6. WSGI (Web Server Gateway Interface)  ✔️
+7. WAS (wep application server)  ✔️
+8. 도메인 동작 원리  ✔️
+9. 대칭키 비대칭키  ✔️
+10. SSL  ✔️
+11. TLS  ✔️
